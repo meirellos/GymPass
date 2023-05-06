@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "GymPass",
-    "slug": "GymPass",
+    "name": "gymPasse",
+    "slug": "gymPasse",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
