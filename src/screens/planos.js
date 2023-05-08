@@ -15,11 +15,11 @@ import "intl/locale-data/jsonp/pt-BR";
 
 import fundo from "../../assets/fundo.jpeg";
 
-import styles from './styles.js';
+import styles from "./styles.js";
 
-export default function Planos(){
-    return(
-      <ScrollView>
+export default function Planos({navigation}) {
+  return (
+    <ScrollView>
       <View style={styles.blocoBanner}>
         <Image source={fundo} style={styles.banner}></Image>
       </View>
@@ -34,15 +34,17 @@ export default function Planos(){
           {Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL",
-          }).format(29,90)}/mês
+          }).format(29, 90)}
+          /mês
+          <TouchableOpacity
+            style={styles.botaoSelecionar}
+            onPress={() => {
+              navigation.navigate('Academias');
+            }}
+          >
+            <Text style={styles.textoBotaoPlano}>Selecionar</Text>
+          </TouchableOpacity>
         </Text>
-       
-        <TouchableOpacity style={styles.botaoSelecionar} onPress={()=>{
-          navigation.navigate()
-        }}>
-          <Text style={styles.textoBotaoPlano}>Selecionar</Text>
-        </TouchableOpacity>
-
       </View>
 
       <View style={styles.blocoPlanos}>
@@ -51,7 +53,16 @@ export default function Planos(){
           {Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL",
-          }).format(49,90)}/mês
+          }).format(49, 90)}
+          /mês
+          <TouchableOpacity
+            style={styles.botaoSelecionar}
+            onPress={() => {
+              navigation.navigate('Academias');
+            }}
+          >
+            <Text style={styles.textoBotaoPlano}>Selecionar</Text>
+          </TouchableOpacity>
         </Text>
       </View>
 
@@ -61,10 +72,18 @@ export default function Planos(){
           {Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL",
-          }).format(79,90)}/mês
+          }).format(79, 90)}
+          /mês
+          <TouchableOpacity
+            style={styles.botaoSelecionar}
+            onPress={() => {
+              navigation.navigate('Academias');
+            }}
+          >
+            <Text style={styles.textoBotaoPlano}>Selecionar</Text>
+          </TouchableOpacity>
         </Text>
       </View>
-
-      </ScrollView>
-    )
+    </ScrollView>
+  );
 }

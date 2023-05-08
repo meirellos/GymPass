@@ -15,28 +15,54 @@ export default StyleSheet.create({
     width: 170,
     height: 130,
     borderRadius: "4px",
+    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
   },
   input: {
     height: 40,
     margin: 12,
+    marginTop: 20,
     borderWidth: 1,
     padding: 10,
     backgroundColor: "White",
     borderRadius: 6,
   },
+  botoesLogin:{
+    flexDirection: "row",
+    display: "flex",
+    alignItems: 'center',
+    justifyContent: "center",
+  },
+  botaoLogin: {
+  padding: 20,
+  paddingHorizontal: 60,
+  margin: 5,
+  backgroundColor: "#f23333",
+  borderRadius: 6,
+  boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+  },
   botaoCadastro: {
-    margin: 16,
-    marginTop: 16,
-    paddingVertical: 15,
-    paddingHorizontal: 20,
-    backgroundColor: "#f23333",
-    borderRadius: 6,
+  padding: 20,
+  paddingHorizontal: 40,
+  margin: 5,
+  backgroundColor: "#f23333",
+  borderRadius: 6,
+  boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
   },
   textoCadastro: {
     color: "#fff",
   },
 
   //Styles cadastro.js
+
+  modalCadastro:{
+    margin: 20,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 10,
+    borderRadius: 6,
+    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+  },
 
   //Styles gym.js
   blocoBanner: {
@@ -104,7 +130,7 @@ export default StyleSheet.create({
     lineHeight: 55,
     marginLeft: 12,
     fontWeight: "bold",
-    color: "#822222",
+    color: "#ff0000",
   },
   botaoSelecionar:{
     width: 100, 
@@ -116,12 +142,23 @@ export default StyleSheet.create({
     transform: 'translate(-50%, -50%)',
   },
   textoBotaoPlano:{
+    marginTop: -7,
     textAlign: 'center',
-    marginTop: 10,
     color: '#fff'
   },
   //Styles confirmaAcad.js
   confirmaAcadText: {
-    color: "#red",
+    backgroundColor: '#fff',
+    border: '1px solid #fff',
+    borderRadius: '8px',
+    margin: 50,
+    padding: 30,
+    textAlign: 'center',
+    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+  },
+  confirmaText:{
+    color: '#ff0000' ,
+    fontWeight: 'bold',
+    fontSize: '16px',
   },
 });

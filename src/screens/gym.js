@@ -9,16 +9,13 @@ import {
 } from "react-native";
 
 import { TouchableOpacity } from "react-native-web";
-
 import styles from './styles.js';
-
 import fundo from "../../assets/fundo.jpeg";
 import habitus from "../../assets/habitus-logo.png";
 import redfit from "../../assets/redfit-logo.png";
 import garagem from "../../assets/garagemgym-logo.webp";
 import vida from "../../assets/vida-logo.jpg";
 
-const width = Dimensions.get("screen").width;
 
 export default function Gym({navigation}) {
   return (
@@ -28,7 +25,7 @@ export default function Gym({navigation}) {
       </View>
 
       <View>
-        <Text style={styles.titulo}> Academias disponíveis </Text>
+        <Text style={styles.titulo}> Academias disponíveis neste plano:</Text>
       </View>
 
       <View style={styles.blocoAcademias}>
@@ -40,7 +37,7 @@ export default function Gym({navigation}) {
           </Text>
         </Text>
         <TouchableOpacity style={styles.botaoAcademia} onPress={()=>{
-          navigation.navigate('planoss')
+          navigation.navigate('ConfirmacaoAcad')
         }}>
           <Text style={styles.textoBotao}>Selecionar</Text>
         </TouchableOpacity>
@@ -54,7 +51,9 @@ export default function Gym({navigation}) {
             Local: R. Henrique Davi, 15-55 - Vila Nova Cidade U...
           </Text>
         </Text>
-        <TouchableOpacity style={styles.botaoAcademia}>
+        <TouchableOpacity style={styles.botaoAcademia} onPress={()=>{
+          navigation.navigate('ConfirmacaoAcad')
+        }}>
           <Text style={styles.textoBotao}>Selecionar</Text>
         </TouchableOpacity>
       </View>
@@ -67,7 +66,9 @@ export default function Gym({navigation}) {
             Local: R. Mario Gonzaga Junqueira, 47 - Quadra 14 -...
           </Text>
         </Text>
-        <TouchableOpacity style={styles.botaoAcademia}>
+        <TouchableOpacity style={styles.botaoAcademia} onPress={()=>{
+          navigation.navigate('ConfirmacaoAcad')
+        }}>
           <Text style={styles.textoBotao}>Selecionar</Text>
         </TouchableOpacity>
       </View>
@@ -80,7 +81,9 @@ export default function Gym({navigation}) {
             Local: Rua Wenceslau Braz, 2-70 - Vila Souto, Bauru...
           </Text>
         </Text>
-        <TouchableOpacity style={styles.botaoAcademia}>
+        <TouchableOpacity style={styles.botaoAcademia} onPress={()=>{
+          navigation.navigate('ConfirmacaoAcad')
+        }}>
           <Text style={styles.textoBotao}>Selecionar</Text>
         </TouchableOpacity>
       </View>
