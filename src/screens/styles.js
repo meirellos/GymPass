@@ -12,19 +12,20 @@ export default StyleSheet.create({
   logo: {
     flexDirection: "column",
     justifyContent: "center",
-    width: 170,
-    height: 130,
+    width: 380,
+    height: 300,
     borderRadius: "4px",
-    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+
   },
   input: {
     height: 40,
     margin: 12,
     marginTop: 20,
-    borderWidth: 1,
+    borderWidth: 3,
     padding: 10,
     backgroundColor: "White",
     borderRadius: 6,
+    borderColor: "#a0522d"
   },
   botoesLogin:{
     flexDirection: "row",
@@ -33,23 +34,26 @@ export default StyleSheet.create({
     justifyContent: "center",
   },
   botaoLogin: {
-  padding: 20,
+  padding: 10,
   paddingHorizontal: 60,
   margin: 5,
-  backgroundColor: "#f23333",
+  backgroundColor: "#a0522d",
   borderRadius: 6,
   boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
   },
   botaoCadastro: {
-  padding: 20,
-  paddingHorizontal: 40,
   margin: 5,
-  backgroundColor: "#f23333",
   borderRadius: 6,
-  boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
   },
   textoCadastro: {
+    color: "#000",
+    textAlign: "center",
+    fontWeight: "bold",
+  },
+  textoCadastro2: {
     color: "#fff",
+    textAlign: "center",
+    fontWeight: "bold",
   },
 
   //Styles cadastro.js
@@ -74,10 +78,19 @@ export default StyleSheet.create({
     height: 150,
   },
   titulo: {
+    fontFamily: "Arial",
+    fontSize: 40,
+    textAlign: "center",
+    fontWeight: "bold",
+    marginTop: 20,
+    color: '#a0522d'
+  },
+  titulo2: {
     fontFamily: "Montserrat",
     fontSize: 20,
     textAlign: "center",
     marginTop: 20,
+    color: '#a0522d'
   },
   logos: {
     width: 75,
@@ -108,7 +121,7 @@ export default StyleSheet.create({
     marginTop: 16,
     paddingVertical: 15,
     paddingHorizontal: 20,
-    backgroundColor: "#f23333",
+    backgroundColor: "#a0522d",
     borderRadius: 6,
   },
   textoBotao: {

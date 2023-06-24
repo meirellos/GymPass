@@ -14,15 +14,17 @@ import styles from "./styles.js";
 import { TouchableOpacity } from "react-native-web";
 
 import logo from "../../assets/logo.png";
+import instru from "../../assets/instrumentos.jpg";
 
 export default function Login({ navigation }) {
   return (
     <ScrollView>
+      <Text style={styles.titulo}>BT Instrumentos</Text>
+
       <View style={styles.bloco}>
-        <Image source={logo} style={styles.logo}></Image>
+        <Image source={instru} style={styles.logo}></Image>
       </View>
-      <Text style={styles.titulo}>Seja bem vindo!</Text>
-      <Text style={styles.titulo}>Faça seu login ou cadastre-se abaixo.</Text>
+      <Text style={styles.titulo2}>Faça o login ou crie sua conta agora mesmo!</Text>
 
       <TextInput
         style={styles.input}
@@ -35,8 +37,16 @@ export default function Login({ navigation }) {
         secureTextEntry={true}
       ></TextInput>
 
-      <View style={styles.botoesLogin}>
-        <TouchableOpacity
+
+      <TouchableOpacity
+          style={styles.botaoLogin}
+          onPress={() => {
+            navigation.navigate("Planos");
+          }}
+        >
+          <Text style={styles.textoCadastro2}>Logar</Text>
+        </TouchableOpacity>
+      <TouchableOpacity
           style={styles.botaoCadastro}
           onPress={() => {
             navigation.navigate("Cadastro");
@@ -44,16 +54,6 @@ export default function Login({ navigation }) {
         >
           <Text style={styles.textoCadastro}>Cadastre-se</Text>
         </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.botaoLogin}
-          onPress={() => {
-            navigation.navigate("Planos");
-          }}
-        >
-          <Text style={styles.textoCadastro}>Login</Text>
-        </TouchableOpacity>
-      </View>
     </ScrollView>
   );
 }

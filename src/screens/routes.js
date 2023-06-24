@@ -19,9 +19,9 @@ export default function Rotas() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        activeColor="red"
+        activeColor="black"
         inactiveColor="#dedede"
-        barStyle={{ backgroundColor: "#F45F52" }}
+        barStyle={{ backgroundColor: "#a0522d" }}
       >
         <Tab.Screen
           name="Home"
@@ -33,16 +33,7 @@ export default function Rotas() {
             ),
           }}
         ></Tab.Screen>
-        <Tab.Screen
-          name="Planos"
-          component={Planos}
-          options={{
-            tabBarLabel: "Planos",
-            tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons name="view-list" color={color} size={26} />
-            ),
-          }}
-        ></Tab.Screen>
+        
       </Tab.Navigator>
     </NavigationContainer>
   );
